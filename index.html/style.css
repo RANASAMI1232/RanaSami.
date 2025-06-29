@@ -1,0 +1,79 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top right, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Glowing title */
+h1 {
+  font-size: 3em;
+  margin-top: 40px;
+  animation: glow 2s ease-in-out infinite alternate;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0 0 10px #fff, 0 0 20px #ff73c0, 0 0 30px #ff73c0;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff73c0, 0 0 30px #ff73c0;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #f94eae, 0 0 40px #f94eae;
+  }
+}
+
+/* Profile photo */
+.photo {
+  margin: 20px auto;
+}
+.photo img {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Message text */
+.message {
+  margin: 20px auto;
+  font-size: 1.5em;
+  max-width: 600px;
+  padding: 0 10px;
+}
+
+/* Confetti canvas */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .message {
+    font-size: 1.2em;
+  }
+
+  .photo img {
+    width: 10px;
+    height: 10px;
+  }
+}
